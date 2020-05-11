@@ -1,0 +1,14 @@
+[
+  {
+    "id": "post",
+    "name": "Post",
+    "repeatable": true,
+    "value": "post.json"
+  },
+  {
+    "id": "tag",
+    "name": "Tag",
+    "repeatable": true,
+    "value": "tag.json"
+  }
+]

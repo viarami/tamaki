@@ -1,0 +1,27 @@
+{
+  "Main": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "Slug for the tag"
+      }
+    },
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title",
+        "placeholder": "Title of the tag"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink",
+        "label": "Description",
+        "placeholder": "Optional: Description for the tag"
+      }
+    }
+  }
+}

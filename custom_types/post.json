@@ -1,0 +1,254 @@
+{
+  "Main": {
+    "title": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1",
+        "label": "Title",
+        "placeholder": "Title for the post…"
+      }
+    },
+    "summary": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph, strong, em",
+        "label": "Short Summary"
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "labels": {
+          "team": [],
+          "list": [],
+          "text": [],
+          "gallery": [],
+          "image": [],
+          "portfolio_overview": [],
+          "related_pages": [],
+          "image_header": []
+        },
+        "choices": {
+          "text": {
+            "type": "Slice",
+            "fieldset": "Text",
+            "description": "Block with text",
+            "icon": "format_color_text",
+            "display": "list",
+            "non-repeat": {
+              "text": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, image, embed, list-item, o-list-item",
+                  "label": "Text",
+                  "placeholder": "Text…"
+                }
+              }
+            },
+            "repeat": {}
+          },
+          "gallery": {
+            "type": "Slice",
+            "fieldset": "Gallery",
+            "description": "Gallery with photos",
+            "icon": "add_a_photo",
+            "display": "grid",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading1",
+                  "label": "Title",
+                  "placeholder": "Title for the Gallery…"
+                }
+              },
+              "column_number": {
+                "type": "Select",
+                "config": {
+                  "options": ["2", "3", "4"],
+                  "default_value": "2",
+                  "label": "Column Number"
+                }
+              }
+            },
+            "repeat": {
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 2048
+                  },
+                  "thumbnails": [
+                    {
+                      "name": "1536",
+                      "width": 1536,
+                      "height": null
+                    },
+                    {
+                      "name": "1024",
+                      "width": 1024,
+                      "height": null
+                    },
+                    {
+                      "name": "768",
+                      "width": 768,
+                      "height": null
+                    },
+                    {
+                      "name": "640",
+                      "width": 640,
+                      "height": null
+                    },
+                    {
+                      "name": "320",
+                      "width": 320,
+                      "height": null
+                    }
+                  ],
+                  "label": "Image"
+                }
+              }
+            }
+          },
+          "image": {
+            "type": "Slice",
+            "fieldset": "Image",
+            "description": "a single photo",
+            "icon": "camera",
+            "display": "list",
+            "non-repeat": {
+              "whitespace": {
+                "type": "Select",
+                "config": {
+                  "options": ["Center", "Left", "Right", "None"],
+                  "default_value": "Center",
+                  "label": "Whitespace"
+                }
+              },
+              "image": {
+                "type": "Image",
+                "config": {
+                  "constraint": {
+                    "width": 2048
+                  },
+                  "thumbnails": [
+                    {
+                      "name": "1536",
+                      "width": 1536,
+                      "height": null
+                    },
+                    {
+                      "name": "1024",
+                      "width": 1024,
+                      "height": null
+                    },
+                    {
+                      "name": "768",
+                      "width": 768,
+                      "height": null
+                    },
+                    {
+                      "name": "640",
+                      "width": 640,
+                      "height": null
+                    },
+                    {
+                      "name": "320",
+                      "width": 320,
+                      "height": null
+                    }
+                  ],
+                  "label": "Image"
+                }
+              },
+              "caption": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, preformatted, heading1, heading2, heading3, heading4, heading5, heading6, strong, em, hyperlink, o-list-item",
+                  "label": "Caption",
+                  "placeholder": "Optional: Caption for the photo"
+                }
+              }
+            },
+            "repeat": {}
+          }
+        }
+      }
+    }
+  },
+  "Meta": {
+    "uid": {
+      "type": "UID",
+      "config": {
+        "label": "Slug",
+        "placeholder": "Slug for the post"
+      }
+    },
+    "meta_description": {
+      "type": "StructuredText",
+      "config": {
+        "single": "paragraph",
+        "label": "Meta Description"
+      }
+    },
+    "tags": {
+      "type": "Group",
+      "config": {
+        "fields": {
+          "tag": {
+            "type": "Link",
+            "config": {
+              "select": "document",
+              "customtypes": ["tag"],
+              "label": "Tag",
+              "placeholder": "Tag for the post"
+            }
+          }
+        },
+        "label": "Tags"
+      }
+    },
+    "main_image": {
+      "type": "Image",
+      "config": {
+        "constraint": {
+          "width": 2048
+        },
+        "thumbnails": [
+          {
+            "name": "1536",
+            "width": 1536,
+            "height": null
+          },
+          {
+            "name": "1024",
+            "width": 1024,
+            "height": null
+          },
+          {
+            "name": "768",
+            "width": 768,
+            "height": null
+          },
+          {
+            "name": "640",
+            "width": 640,
+            "height": null
+          },
+          {
+            "name": "320",
+            "width": 320,
+            "height": null
+          },
+          {
+            "name": "social",
+            "width": 1200,
+            "height": 630
+          }
+        ],
+        "label": "Main Image"
+      }
+    }
+  }
+}
