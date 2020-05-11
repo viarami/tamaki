@@ -1,4 +1,4 @@
-# tamaki
+# Tamaki
 
 > Blog built with Prismic.io and NuxtJS
 
