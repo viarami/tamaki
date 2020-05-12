@@ -1,5 +1,10 @@
 <template>
-  <img :srcset="GetImageSrcset()" :src="imgobject.url" :sizes="sizes" :alt="imgobject.alt" />
+  <img
+    :srcset="imageSrcset()"
+    :src="imgobject.url"
+    :sizes="sizes"
+    :alt="imgobject.alt"
+  />
 </template>
 
 <script>
@@ -15,7 +20,7 @@ export default {
     }
   },
   methods: {
-    GetImageSrcset() {
+    imageSrcset() {
       let srcset =
         `${this.imgobject['320'].url} ${this.imgobject['320'].dimensions.width}w, ` +
         `${this.imgobject['640'].url} ${this.imgobject['640'].dimensions.width}w, ` +
